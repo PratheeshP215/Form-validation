@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="formjavascript.css">
+</head>
+<body>    
+        <div id="container"> 
+            <h3>Register With Us</h3>
+            
+            <form id="formpage"> 
+
+                <div> <label>Username</label><br>
+                    <input type="name" id="usernameinput" class="inputs" placeholder="Username"><br>
+                </div>
+                
+                <div> <label>Email</label><br>
+                        <input type="email" id="email"  class="inputs"  placeholder="Email"><br>
+                    </div>
+               
+                <div> <label>password</label><br>
+                        <input type="password" id="password" class="inputs"placeholder="password"><br>
+                    </div>
+                
+                <div> <label>confirmpassword</label><br>
+                        <input type="password" id="confirmpassword" class="inputs" placeholder="re-enter the password"><br><br>
+                    </div>
+                
+                        <button id="Submit">Submit</button>
+                        <div id="feedback"></div>
+                    </form>
+                </div>
+      <script>
+          const user=document.getElementById("usernameinput");
+          const email=document.getElementById("email");
+          const pass1=document.getElementById("password");
+          const pass2=document.getElementById("confirmpassword");
+          const form =document.getElementById("formpage");
+          const fee=document.getElementById("feedback");
+          const input = document.getElementsByClassName(".inputs")
+
+
+          document.querySelector("button")
+          .addEventListener("click",(e) =>{
+              e.preventDefault();
+              Default1();
+          })
+
+          function Default1() {
+              if (user.value === "") {
+                  fee.classList.add("error");
+                  fee.textContent=("Username is INVALID");
+              }
+              else if (email.value === "") {
+                fee.classList.add("error");
+                fee.textContent=("Email is INVALID");
+            }
+              else if (pass1.value === "") {
+                fee.classList.add("error");
+                  fee.textContent=("Password is INVALID");
+              }
+              else if (pass2.value === "") {
+                fee.classList.add("error");
+                  fee.textContent=("ConformPasswor is INVALID");
+              }
+              else if (pass2.value !== pass1.value) {
+                fee.classList.add("error");
+                  fee.textContent = ("Password is NOT match");
+              }
+              else if (Submit.code === "Enter") {
+                  console.log(Submit.target.value);
+              }
+             
+            
+              else{
+                  fee.classList.remove("error");
+                  fee.classList.add("success");
+                  fee.textContent=("Valid");
+              }
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*const userName = document.getElementById('usernameinput');
+            const email = document.getElementById('email');
+            const pass = document.getElementById('password');
+            const cnpass = document.getElementById('confirmpassword');
+            const fee = document.getElementById('feedback');
+            const form = document.getElementById('formpage');
+
+           document.querySelector("button")
+           Submit.addEventListener("click", (event) =>{
+              event.preventDefault() 
+              validateInput()});
+              const inputs=document.getElementsByClassName(".inputs")
+           function validateInput() {
+               if (userName.value.trim()==="") {
+                   console.log(usernameinput);
+                   fee.textContent=(userName,"User Name cannot be empty");
+                   fee.setAttribute("style", "background-color:red");
+               }
+               else{
+                fee.textContent=(userName,"valid");
+                fee.setAttribute("style", "background-color:green");                 
+               }
+
+               if (email.value.trim()==="") {
+                fee.textContent=(email,"is invalid");
+                   
+               }
+               else{
+                   if(!isvalidEmail(email.value.trim())){
+                    fee.textContent=(email,"is invalid");
+                     
+                    }
+
+                    else{
+                        fee.textContent=(email,"valid");
+                    
+                    }
+                }
+                if (pass.value.trim() ==="" ){
+                    fee.textContent=(pass,"User Name cannot be empty");
+                  
+                }
+                else{
+                    fee.textContent=(pass,"User Name cannot be empty");
+                    
+                }
+                if(cnpass.value.trim()===""){
+                    fee.textContent=(cnpass,"User Name cannot be empty");
+                   
+           }
+           else{
+               if (pass.value.trim() !== cnpass.value.trim()) {
+                fee.textContent=(cnpass,"User Name cannot be empty");
+                   inputs.setAttribute('style','border:3px solid red');
+               }
+               else{
+                fee.textContent=(cnpass,"User Name cannot be empty");
+                   input.setAttribute('style','border:3px solid green');
+               }
+            }
+        }
+        function isvalidEmail(email) {
+            return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+           }*/
+   
+        
+
+        
+    </script> 
+</body>
+</html>

@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(225, 240, 221);
+    font-size: 20px;
+}
+ 
+#container{
+    position: absolute;
+    background-color: rgb(71, 69, 212); 
+    text-align: center; 
+    margin-top: 130px;
+    margin-left: 40%;
+    margin-right: 40%;
+    line-height: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px black;
+    width: 400px;
+}
+h3{
+    font-size: 35px;
+}
+label{
+    font-size: 23px;
+}
+input{
+    height: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 80%;
+    display:inline-block;
+}
+button{
+    background-color: rgb(41, 110, 28);
+    color: white;
+    font-size: larger;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.success{
+    background-color: green;
+}
+.error{
+     background-color: red;
+}
+#feedback{
+    color:white;
+     
+    
+}
+ 
+ 
